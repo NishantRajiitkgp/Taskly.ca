@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+  
+  --color-cream: #FAF9F6;
+  --color-rich-black: #111111;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #AA8A29;
+  --color-gold-light: #F3E5AB;
+  --color-warm-gray: #5A524C;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-33.33%); }
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    /* Chrome, Safari and Opera */
+    display: none;
+  }
+}
